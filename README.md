@@ -113,4 +113,7 @@ http://localhost:8080/
 * if you install defectdojo in windows it is better to install (docker desktop + WSL v2)
 * if you install defectdojo in vmware system it is better use (docker decktop + hyper-v) 
 * we get error wsl.exe --update in offline mode in windows in vmware we should use hyper-v instead
+* we use "find" instead of "grep" in windows
+* we use "notepad" instead of "vim" for editing file in windows
+* redis & postgres dose not ant tags and after export with and "load" in new machine not detect and docker compose try to download this image from the net ! we should add tags for prevent this issue
 
