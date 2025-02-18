@@ -110,6 +110,13 @@ http://localhost:8080/
 </h1>
 
 
+### demo 
+```
+https://demo.defectdojo.org/dashboard
+admin
+1Defectdojo@demo#appsec
+```
+
 
 ## Tips
 * if you install defectdojo in windows it is better to install (docker desktop + WSL v2)
@@ -119,3 +126,6 @@ http://localhost:8080/
 * we use "notepad" instead of "vim" for editing file in windows
 * redis & postgres dose not ant tags and after export with and "load" in new machine not detect and docker compose try to download this image from the net ! we should add tags for prevent this issue
 
+
+### refrences
+* [defectdojo](https://github.com/DefectDojo/django-DefectDojo)
