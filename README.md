@@ -85,7 +85,7 @@ services:
       - "8080:8080"
 ...
 
-# we should change redis and postgres to new name :
+# we should change redis and postgres to new local address :
 image: postgres:latest 
 image: redis:latest 
 
