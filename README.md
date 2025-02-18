@@ -49,21 +49,57 @@ cd django-DefectDojo
 docker compose build
 
 
+
+# add tags to postgres & redis, because this image dos not any tag!
+docker images
+docker tag <postgres_image_id> postgres:latest
+docker tag <redis_image_id> redis:latest
+
+
+
 # Save Docker Images:
 docker save -o defectdojo.tar defectdojo/defectdojo-django
 docker save -o nginx.tar defectdojo/defectdojo-nginx
 docker save -o postgres.tar postgres
 docker save -o redis.tar redis
 
-# Step 2: Install on the Offline Machine
+
+# Install on the Offline Machine
 docker load -i defectdojo.tar
 docker load -i nginx.tar
 docker load -i postgres.tar
 docker load -i redis.tar
+```
+## edit docker-compose
+```
+notepad docker-compose.yml
+
+.
+.
+.
+version: '3'
+services:
+  defectdojo:
+    image: defectdojo/defectdojo-django:latest  # Ensure this matches your local image name
+    ports:
+      - "8080:8080"
+...
+```
+
+
+
+# find password for user: admin
+docker compose logs initializer | find "Admin password:"
+
+
+
 
 # Access DefectDojo:
 http://localhost:8080/
 ```
+
+
+
 
 
 ## Tips
