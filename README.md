@@ -84,10 +84,19 @@ services:
     ports:
       - "8080:8080"
 ...
+
+# we should change redis and postgres to new name :
+image: postgres:latest 
+image: redis:latest 
+
 ```
 
 
 ```
+# create container and run app
+docker compose up -d
+
+
 # find password for user: admin
 docker compose logs initializer | find "Admin password:"
 
