@@ -17,7 +17,7 @@ DefectDojo is a DevSecOps, ASPM (application security posture management), and v
 DefectDojo can be installed using several methods, including Docker Compose, Kubernetes, SaaS, or package installation. Below are the steps for the most common installation methods:
 
 
-# 1. Docker Compose Installation (Recommended)
+## 1. Docker Compose Installation (Recommended)
 * Docker version 19.03.0+ and Docker Compose 1.28.0+.
 * A system with at least 2 vCPUs, 8GB RAM, and 2GB disk space.
 
@@ -41,7 +41,7 @@ docker compose up -d
 docker compose logs initializer | grep "Admin password:"
 ```
 
-# 2. Offline Installation
+## 2. Offline Installation
 ```
 # in internet system download repo :
 git clone https://github.com/DefectDojo/django-DefectDojo.git
@@ -70,7 +70,7 @@ docker load -i nginx.tar
 docker load -i postgres.tar
 docker load -i redis.tar
 ```
-## edit docker-compose in offline machine
+### edit docker-compose in offline machine
 ```
 notepad docker-compose.yml
 
