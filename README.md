@@ -70,7 +70,7 @@ docker load -i nginx.tar
 docker load -i postgres.tar
 docker load -i redis.tar
 ```
-## edit docker-compose
+## edit docker-compose in offline machine
 ```
 notepad docker-compose.yml
 
@@ -87,11 +87,9 @@ services:
 ```
 
 
-
+```
 # find password for user: admin
 docker compose logs initializer | find "Admin password:"
-
-
 
 
 # Access DefectDojo:
