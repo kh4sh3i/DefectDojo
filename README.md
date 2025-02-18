@@ -106,7 +106,7 @@ http://localhost:8080/
 ```
 
 <h1 align="center">
-  <img src="./img/docker.png" width="500px;">
+  <img src="./img/docker.png" width="100%;">
 </h1>
 
 
